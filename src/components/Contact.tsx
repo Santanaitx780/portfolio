@@ -3,6 +3,8 @@
 import { personalInfo } from "@/data/portfolio";
 import { useState } from "react";
 
+const FORMSPREE_ID = "mzdqnbdl";
+
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -14,7 +16,7 @@ export default function Contact() {
     setErrorMsg("");
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
