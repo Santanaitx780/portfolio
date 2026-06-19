@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://santanaitx780.github.io/portfolio"),
   title: "UWIMPUHWE Regis | Full Stack Developer",
   description:
     "Full Stack Developer specializing in React, Next.js, Node.js, and TypeScript. Building modern web applications with cutting-edge technologies.",
